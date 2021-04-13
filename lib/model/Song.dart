@@ -28,7 +28,7 @@ class Song {
   // });
 
   Song({
-    this.artist, this.imageResourceFile, this.title
+    this.artist, this.imageResourceFile, this.title, this.genre
   });
 
 

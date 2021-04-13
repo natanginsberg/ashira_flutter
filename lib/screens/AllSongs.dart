@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:ashira_flutter/customWidgets/SongLayout.dart';
@@ -17,46 +18,75 @@ List<Song> songs = [
       artist: "avrham fried",
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "aleh katan"),
+      title: "aleh katan",
+      genre: "mizrachi"),
   Song(
       artist: "simcha leiner",
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "ml"),
-  // Song(
-  //     artist: "avrham fried",
-  //     imageResourceFile:
-  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-  //     title: "aleh katan"),
-  // Song(
-  //     artist: "avrham fried",
-  //     imageResourceFile:
-  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-  //     title: "aleh katan"),
-  // Song(
-  //     artist: "avrham fried",
-  //     imageResourceFile:
-  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-  //     title: "aleh katan"),
-  // Song(
-  //     artist: "avrham fried",
-  //     imageResourceFile:
-  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-  //     title: "aleh katan"),
-  // Song(
-  //     artist: "avrham fried",
-  //     imageResourceFile:
-  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-  //     title: "aleh katan")
+      title: "we will rock",
+      genre: "hebrew"),
+  Song(
+      artist: "avrham fried",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "aleh katan",
+      genre: "mizrachi"),
+  Song(
+      artist: "simcha leiner",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "we will rock",
+      genre: "hebrew"),
+  Song(
+      artist: "avrham fried",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "aleh katan",
+      genre: "mizrachi"),
+  Song(
+      artist: "simcha leiner",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "we will rock",
+      genre: "hebrew"),
+  Song(
+      artist: "avrham fried",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "aleh katan",
+      genre: "mizrachi"),
+  Song(
+      artist: "simcha leiner",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "we will rock",
+      genre: "hebrew"),
+  Song(
+      artist: "avrham fried",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "aleh katan",
+      genre: "mizrachi"),
+  Song(
+      artist: "simcha leiner",
+      imageResourceFile:
+          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+      title: "we will rock",
+      genre: "hebrew"),
 ];
+
+List<String> genres = ["All Songs", "hebrew"];
 
 List<List<Song>> searchPath = [];
 List<Song> gridSongs = new List.from(songs);
 
-bool onSearchTextChanged;
-
 class _AllSongsState extends State<AllSongs> {
   final TextEditingController controller = new TextEditingController();
+  bool _showGenreBar = false;
+  bool onSearchTextChanged;
+
+  String currentGenre = "All Songs";
 
   String previousValue = "";
 
@@ -72,114 +102,347 @@ class _AllSongsState extends State<AllSongs> {
     //   signInAnon();
     // });
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SafeArea(
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.menu,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              SafeArea(
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.mic,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * 0.8,
-            height: 48,
-            decoration: BoxDecoration(
-                border: Border.all(color: Color(0xFF8D3C8E), width: 2),
-                borderRadius: BorderRadius.circular(50),
-                gradient: RadialGradient(
-                  center: Alignment.center,
-                  radius: 0.8,
-                  colors: [
-                    const Color(0xFF221A4D), // blue sky
-                    const Color(0xFF000000), // yellow sun
-                  ],
-                )),
-            child: Row(
+        backgroundColor: Colors.transparent,
+        body:
+            // Stack(
+            //   alignment: Alignment.center,
+            //   children: [
+            //     Positioned(
+            //       top: 70,
+            //       child: Padding(
+            //         padding:
+            //             const EdgeInsets.symmetric(vertical: 15.0, horizontal: 8.0),
+            //         child: Container(
+            //           width: MediaQuery.of(context).size.width * 0.8,
+            //           height: 48,
+            //           decoration: BoxDecoration(
+            //               border: Border.all(color: Color(0xFF8D3C8E), width: 2),
+            //               borderRadius: BorderRadius.circular(50),
+            //               gradient: RadialGradient(
+            //                 center: Alignment.center,
+            //                 radius: 0.8,
+            //                 colors: [
+            //                   const Color(0xFF221A4D), // blue sky
+            //                   const Color(0xFF000000), // yellow sun
+            //                 ],
+            //               )),
+            //           child: Row(
+            //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //               children: [
+            //                 Padding(
+            //                   padding: const EdgeInsets.all(8.0),
+            //                   child: Icon(
+            //                     Icons.search,
+            //                     color: Colors.white,
+            //                   ),
+            //                 ),
+            //                 SizedBox(
+            //                   width: MediaQuery.of(context).size.width * 0.5,
+            //                   height: 48,
+            //                   child: Center(
+            //                     child: TextField(
+            //                       style: TextStyle(color: Colors.white),
+            //                       textAlign: TextAlign.center,
+            //                       controller: controller,
+            //                       decoration: new InputDecoration(
+            //                         hintText: 'Search',
+            //                         hintStyle: TextStyle(color: Colors.white),
+            //                         fillColor: Colors.transparent,
+            //                       ),
+            //                       onChanged: (String value) {
+            //                         setState(() {
+            //                           // searchPath.add(new List.from(gridSongs));
+            //                           gridSongs = value.length > previousValue.length
+            //                               ? getNextSong(value)
+            //                               : getLastSong();
+            //                           previousValue = value;
+            //                         });
+            //                       },
+            //                     ),
+            //                   ),
+            //                 ),
+            //                 IconButton(
+            //                   icon: new Icon(
+            //                     Icons.cancel,
+            //                     color: Colors.white,
+            //                   ),
+            //                   onPressed: () {
+            //                     controller.clear();
+            //                     previousValue = "";
+            //                     setState(() {
+            //                       gridSongs = List.from(searchPath.first);
+            //                       searchPath.clear();
+            //                     });
+            //                   },
+            //                 ),
+            //               ]),
+            //         ),
+            //       ),
+            //     ),
+            //     Positioned.fill(
+            //       top: 150,
+            //       child: Container(
+            //           height: MediaQuery.of(context).size.height - 400,
+            //           decoration: BoxDecoration(
+            //               gradient: RadialGradient(
+            //             center: Alignment.center,
+            //             radius: 0.8,
+            //             colors: [
+            //               const Color(0xFF221A4D), // blue sky
+            //               const Color(0xFF000000), // yellow sun
+            //             ],
+            //           )),
+            //           margin: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+            //           child: buildGridView(gridSongs)),
+            //     ),
+            //     Align(
+            //       alignment: Alignment.topCenter,
+            //       child: SafeArea(
+            //         child: Row(
+            //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //           children: [
+            //             IconButton(
+            //               onPressed: () {},
+            //               icon: Icon(
+            //                 Icons.menu,
+            //                 color: Colors.white,
+            //               ),
+            //             ),
+            //             if (_showGenreBar)
+            //               Container(
+            //                   height: 150,
+            //                   width: 110,
+            //                   decoration: BoxDecoration(
+            //                       gradient: LinearGradient(
+            //                     colors: <Color>[Colors.pink, Colors.blue],
+            //                   )),
+            //                   child: Row(
+            //                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //                     children: [
+            //                       buildListView(),
+            //                       Align(
+            //                         alignment: Alignment.topCenter,
+            //                         child: Transform.rotate(
+            //                           angle: 270 * pi / 180,
+            //                           child: IconButton(
+            //                             padding: const EdgeInsets.symmetric(
+            //                                 horizontal: 4.0),
+            //                             onPressed: () {
+            //                               setState(() {
+            //                                 _showGenreBar = false;
+            //                               });
+            //                             },
+            //                             icon:
+            //                                 const Icon(Icons.arrow_back_ios_rounded),
+            //                             color: Colors.pink[300],
+            //                           ),
+            //                         ),
+            //                       )
+            //                     ],
+            //                   ))
+            //             else
+            //               GenreButton(
+            //                   height: 40,
+            //                   width: 110,
+            //                   child: Row(
+            //                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //                     children: [
+            //                       Text(
+            //                         currentGenre,
+            //                         style: TextStyle(color: Colors.white),
+            //                       ),
+            //                       Icon(
+            //                         Icons.arrow_back_ios_rounded,
+            //                         color: Colors.pink[300],
+            //                       ),
+            //                     ],
+            //                   ),
+            //                   gradient: LinearGradient(
+            //                     colors: <Color>[Colors.pink, Colors.blue],
+            //                   ),
+            //                   onPressed: () {
+            //                     setState(() {
+            //                       _showGenreBar = true;
+            //                     });
+            //                   }),
+            //             IconButton(
+            //               onPressed: () {},
+            //               icon: Icon(
+            //                 Icons.mic,
+            //                 color: Colors.white,
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            Column(
+          children: [
+            SafeArea(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.search,
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.menu,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    height: 48,
-                    child: Center(
-                      child: TextField(
-                        style: TextStyle(color: Colors.white),
-                        textAlign: TextAlign.center,
-                        controller: controller,
-                        decoration: new InputDecoration(
-                          hintText: 'Search',
-                          hintStyle: TextStyle(color: Colors.white),
-                          fillColor: Colors.transparent,
+                  if (_showGenreBar)
+                    Container(
+                        height: 150,
+                        width: 110,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                          colors: <Color>[Colors.pink, Colors.blue],
+                        )),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            buildListView(),
+                            Align(
+                              alignment: Alignment.topCenter,
+                              child: Transform.rotate(
+                                angle: 270 * pi / 180,
+                                child: IconButton(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 4.0),
+                                  onPressed: () {
+                                    setState(() {
+                                      _showGenreBar = false;
+                                    });
+                                  },
+                                  icon:
+                                      const Icon(Icons.arrow_back_ios_rounded),
+                                  color: Colors.pink[300],
+                                ),
+                              ),
+                            )
+                          ],
+                        ))
+                  else
+                    // GenreButton(
+                    //     height: 40,
+                    //     width: 110,
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    //       children: [
+                    //         Text(
+                    //           currentGenre,
+                    //           style: TextStyle(color: Colors.white),
+                    //         ),
+                    //         Icon(
+                    //           Icons.arrow_back_ios_rounded,
+                    //           color: Colors.pink[300],
+                    //         ),
+                    //       ],
+                    //     ),
+                    //     gradient: LinearGradient(
+                    //       colors: <Color>[Colors.pink, Colors.blue],
+                    //     ),
+                    //     onPressed: () {
+                    //       setState(() {
+                    //         _showGenreBar = true;
+                    //       });
+                    //     }),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.mic,
+                        color: Colors.white,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 15.0, horizontal: 8.0),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: 48,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xFF8D3C8E), width: 2),
+                    borderRadius: BorderRadius.circular(50),
+                    gradient: RadialGradient(
+                      center: Alignment.center,
+                      radius: 0.8,
+                      colors: [
+                        const Color(0xFF221A4D), // blue sky
+                        const Color(0xFF000000), // yellow sun
+                      ],
+                    )),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.white,
                         ),
-                        onChanged: (String value) {
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        height: 48,
+                        child: Center(
+                          child: TextField(
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                            controller: controller,
+                            decoration: new InputDecoration(
+                              hintText: 'Search',
+                              hintStyle: TextStyle(color: Colors.white),
+                              fillColor: Colors.transparent,
+                            ),
+                            onChanged: (String value) {
+                              setState(() {
+                                // searchPath.add(new List.from(gridSongs));
+                                gridSongs = value.length > previousValue.length
+                                    ? getNextSong(value)
+                                    : getLastSong();
+                                previousValue = value;
+                              });
+                            },
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        icon: new Icon(
+                          Icons.cancel,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          controller.clear();
+                          previousValue = "";
                           setState(() {
-                            // searchPath.add(new List.from(gridSongs));
-                            gridSongs = value.length > previousValue.length
-                                ? getNextSong(value)
-                                : getLastSong();
-                            previousValue = value;
+                            gridSongs = List.from(searchPath.first);
+                            searchPath.clear();
                           });
                         },
                       ),
-                    ),
-                  ),
-                  IconButton(
-                    icon: new Icon(
-                      Icons.cancel,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      controller.clear();
-                      previousValue = "";
-                      searchPath.clear();
-                      setState(() {
-                        gridSongs = List.from(songs);
-                      });
-                    },
-                  ),
-                ]),
-          ),
-          Expanded(
-            child: Container(
-                decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                  center: Alignment.center,
-                  radius: 0.8,
-                  colors: [
-                    const Color(0xFF221A4D), // blue sky
-                    const Color(0xFF000000), // yellow sun
-                  ],
-                )),
-                padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                child: buildGridView(gridSongs)),
-          ),
-        ],
-      ),
-    );
+                    ]),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                  decoration: BoxDecoration(
+                      gradient: RadialGradient(
+                    center: Alignment.center,
+                    radius: 0.8,
+                    colors: [
+                      const Color(0xFF221A4D), // blue sky
+                      const Color(0xFF000000), // yellow sun
+                    ],
+                  )),
+                  margin: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                  child: buildGridView(gridSongs)),
+            ),
+          ],
+        ));
   }
 
   getSongs() {
@@ -199,6 +462,7 @@ class _AllSongsState extends State<AllSongs> {
 
   buildGridView(List<Song> songs) {
     return GridView.builder(
+        shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
             childAspectRatio: 0.6,
@@ -223,9 +487,57 @@ class _AllSongsState extends State<AllSongs> {
             element.title.contains(value) || element.artist.contains(value))
         .toList();
     // ignore: unnecessary_statements
-    value.length != 1
-        ? searchPath.add(List.from(gridSongs))
-        : searchPath.add(List.from(songs));
+    searchPath.add(List.from(gridSongs));
     return searchedSongs;
+  }
+
+  buildListView() {
+    return Expanded(
+      child: Column(children: [
+        Expanded(
+          child: ListView.builder(
+              itemCount: genres.length,
+              itemBuilder: (BuildContext ctx, index) {
+                return Container(
+                  color: Colors.transparent,
+                  alignment: Alignment.center,
+                  child: createElevateButton(genre: genres[index]),
+                );
+              }),
+        )
+      ]),
+    );
+  }
+
+  createElevateButton({String genre}) {
+    return ElevatedButton(
+        style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                (Set<MaterialState> states) {
+              return Colors.transparent;
+            }),
+            elevation: MaterialStateProperty.resolveWith<double>(
+                (Set<MaterialState> states) {
+              return 0.0;
+            }),
+            padding: MaterialStateProperty.resolveWith((states) =>
+                EdgeInsets.symmetric(vertical: 4.0, horizontal: 2.0))),
+        //adds padding inside the button),
+        onPressed: () {
+          setState(() {
+            if (genre == "All Songs")
+              gridSongs = new List.from(songs);
+            else if (currentGenre != genre) {
+              gridSongs = new List.from(
+                  songs.where((element) => element.genre == genre).toList());
+            }
+            currentGenre = genre;
+            _showGenreBar = false;
+          });
+        },
+        child: Text(
+          genre,
+          style: TextStyle(color: Colors.white),
+        ));
   }
 }

@@ -1,6 +1,7 @@
 import 'package:ashira_flutter/screens/AllSongs.dart';
 import 'package:ashira_flutter/screens/Contracts.dart';
 import 'package:ashira_flutter/screens/Promo.dart';
+import 'package:ashira_flutter/screens/Sing.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -31,8 +32,7 @@ class App extends StatelessWidget {
               '/': (context) => Promo(),
               '/contracts': (context) => Contracts(),
               '/allSongs': (context) => AllSongs(),
-              // '/stt':(context) => Stt()
-              // '/location'  : (context) => ChooseLocation(),
+              '/sing': (context) => Sing(),
             },
           );
         }
