@@ -9,12 +9,12 @@ class GenreButton extends StatelessWidget {
   final Function onPressed;
 
   const GenreButton({
-    Key key,
-    @required this.child,
-    this.gradient,
+    required Key key,
+    required this.child,
+    required this.gradient,
     this.width = double.infinity,
-    this.height,
-    this.onPressed,
+    required this.height,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class GenreButton extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(gradient: gradient, boxShadow: [
         BoxShadow(
-          color: Colors.grey[500],
+          color: Colors.grey,
           offset: Offset(0.0, 1.5),
           blurRadius: 1.5,
         ),
@@ -32,7 +32,7 @@ class GenreButton extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-            onTap: onPressed,
+            onTap: () {},
             child: Center(
               child: child,
             )),

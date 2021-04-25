@@ -5,6 +5,8 @@ import 'package:ashira_flutter/screens/Sing.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'model/Song.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
@@ -32,7 +34,7 @@ class App extends StatelessWidget {
               '/': (context) => Promo(),
               '/contracts': (context) => Contracts(),
               '/allSongs': (context) => AllSongs(),
-              '/sing': (context) => Sing(),
+              '/sing': (context) => Sing(new Song(artist: "artist", imageResourceFile: "imageResourceFile", title: "title", genre: "genre", songResourceFile: "songResourceFile", textResourceFile: "textResourceFile")),
             },
           );
         }

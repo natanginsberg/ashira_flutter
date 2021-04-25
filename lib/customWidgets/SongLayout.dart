@@ -1,10 +1,11 @@
 import 'package:ashira_flutter/model/Song.dart';
+import 'package:ashira_flutter/screens/Sing.dart';
 import 'package:flutter/material.dart';
 
 class SongLayout extends StatelessWidget {
   final Song song;
 
-  SongLayout({this.song});
+  SongLayout({required this.song});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,8 @@ class SongLayout extends StatelessWidget {
         return Colors.transparent;
       })),
       onPressed: () {
-        Navigator.pushNamed(context, '/sing', arguments: {'song': song});
+        // Navigator.pushNamed(context, '/sing', arguments: {'song':this.song});
+        Navigator.push(context, MaterialPageRoute(builder: (_)=>Sing(this.song)));
       },
       child: Container(
         decoration: BoxDecoration(

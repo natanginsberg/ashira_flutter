@@ -8,7 +8,7 @@ class Contracts extends StatefulWidget {
 }
 
 class _ContractsState extends State<Contracts> {
-  Future _future;
+  late Future _future;
 
   @override
   Widget build(BuildContext context) {

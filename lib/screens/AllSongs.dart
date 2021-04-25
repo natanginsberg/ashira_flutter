@@ -19,61 +19,51 @@ List<Song> songs = [
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
       title: "aleh katan",
-      genre: "mizrachi"),
-  Song(
-      artist: "simcha leiner",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "we will rock",
-      genre: "hebrew"),
+      genre: "mizrachi",
+      textResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+      songResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
   Song(
       artist: "avrham fried",
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
       title: "aleh katan",
-      genre: "mizrachi"),
-  Song(
-      artist: "simcha leiner",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "we will rock",
-      genre: "hebrew"),
+      genre: "mizrachi",
+      textResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+      songResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
   Song(
       artist: "avrham fried",
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
       title: "aleh katan",
-      genre: "mizrachi"),
-  Song(
-      artist: "simcha leiner",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "we will rock",
-      genre: "hebrew"),
+      genre: "mizrachi",
+      textResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+      songResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
   Song(
       artist: "avrham fried",
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
       title: "aleh katan",
-      genre: "mizrachi"),
-  Song(
-      artist: "simcha leiner",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "we will rock",
-      genre: "hebrew"),
+      genre: "mizrachi",
+      textResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+      songResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
   Song(
       artist: "avrham fried",
       imageResourceFile:
           'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
       title: "aleh katan",
-      genre: "mizrachi"),
-  Song(
-      artist: "simcha leiner",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "we will rock",
-      genre: "hebrew"),
+      genre: "mizrachi",
+      textResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+      songResourceFile:
+          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
 ];
 
 List<String> genres = ["All Songs", "hebrew"];
@@ -84,7 +74,7 @@ List<Song> gridSongs = new List.from(songs);
 class _AllSongsState extends State<AllSongs> {
   final TextEditingController controller = new TextEditingController();
   bool _showGenreBar = false;
-  bool onSearchTextChanged;
+  late bool onSearchTextChanged;
 
   String currentGenre = "All Songs";
 
@@ -455,7 +445,10 @@ class _AllSongsState extends State<AllSongs> {
         songs.add(new Song(
             artist: data['artist'],
             title: data['title'],
-            imageResourceFile: data['imageResourceFile']));
+            imageResourceFile: data['imageResourceFile'],
+            genre: data['genre'],
+            songResourceFile: data['songResourceFile'],
+            textResourceFile: data['textResourceFile']));
       });
     });
   }
@@ -509,7 +502,7 @@ class _AllSongsState extends State<AllSongs> {
     );
   }
 
-  createElevateButton({String genre}) {
+  createElevateButton({required String genre}) {
     return ElevatedButton(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
