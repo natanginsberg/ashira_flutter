@@ -1,18 +1,35 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:path_provider/path_provider.dart';
 
 class Contracts extends StatefulWidget {
   @override
   _ContractsState createState() => _ContractsState();
 }
 
+final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
 class _ContractsState extends State<Contracts> {
   late Future _future;
+
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+
+    return directory.path;
+  }
+
+  Future<File> get _localFile async {
+    final path = await _localPath;
+    return File('$path/contractApproved.txt');
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -56,8 +73,7 @@ class _ContractsState extends State<Contracts> {
               ],
             )),
             child: TextButton(
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, '/allSongs'),
+                onPressed: () => saveResponseAndContinue(),
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Color(0xFFFF94F0)),
@@ -101,5 +117,17 @@ class _ContractsState extends State<Contracts> {
   /// Assumes the given path is a text-file-asset.
   Future<String> getFileData(String path) async {
     return await rootBundle.loadString(path);
+  }
+
+  saveResponseAndContinue() {
+    writeLetter();
+    Navigator.pushReplacementNamed(context, '/allSongs');
+  }
+
+  Future<File> writeLetter() async {
+    final file = await _localFile;
+
+    // Write the file.
+    return file.writeAsString("32");
   }
 }

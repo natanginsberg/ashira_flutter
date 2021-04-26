@@ -29,7 +29,7 @@ class App extends StatelessWidget {
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
-            initialRoute: '/allSongs',
+            initialRoute: '/',
             routes: {
               '/': (context) => Promo(),
               '/contracts': (context) => Contracts(),

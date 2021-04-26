@@ -13,63 +13,65 @@ class AllSongs extends StatefulWidget {
   _AllSongsState createState() => _AllSongsState();
 }
 
+final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
 List<Song> songs = [
-  Song(
-      artist: "avrham fried",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "aleh katan",
-      genre: "mizrachi",
-      textResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
-      songResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
-  Song(
-      artist: "avrham fried",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "aleh katan",
-      genre: "mizrachi",
-      textResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
-      songResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
-  Song(
-      artist: "avrham fried",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "aleh katan",
-      genre: "mizrachi",
-      textResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
-      songResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
-  Song(
-      artist: "avrham fried",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "aleh katan",
-      genre: "mizrachi",
-      textResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
-      songResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
-  Song(
-      artist: "avrham fried",
-      imageResourceFile:
-          'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
-      title: "aleh katan",
-      genre: "mizrachi",
-      textResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
-      songResourceFile:
-          "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
+  // Song(
+  //     artist: "avrham fried",
+  //     imageResourceFile:
+  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+  //     title: "aleh katan",
+  //     genre: "mizrachi",
+  //     textResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+  //     songResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
+  // Song(
+  //     artist: "avrham fried",
+  //     imageResourceFile:
+  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+  //     title: "aleh katan",
+  //     genre: "mizrachi",
+  //     textResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+  //     songResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
+  // Song(
+  //     artist: "avrham fried",
+  //     imageResourceFile:
+  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+  //     title: "aleh katan",
+  //     genre: "mizrachi",
+  //     textResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+  //     songResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
+  // Song(
+  //     artist: "avrham fried",
+  //     imageResourceFile:
+  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+  //     title: "aleh katan",
+  //     genre: "mizrachi",
+  //     textResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+  //     songResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
+  // Song(
+  //     artist: "avrham fried",
+  //     imageResourceFile:
+  //         'https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%90%D7%91%D7%90/img903052.jpg',
+  //     title: "aleh katan",
+  //     genre: "mizrachi",
+  //     textResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%91%D7%99%D7%98%D7%99%D7%9D%20%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A.lrc",
+  //     songResourceFile:
+  //         "https://s3.wasabisys.com/playbacks/%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A4%D7%A8%D7%99%D7%93/%D7%94%D7%A0%D7%A0%D7%99%20%D7%91%D7%99%D7%93%D7%9A/%D7%94%D7%A0%D7%A0%D7%99_%D7%91%D7%99%D7%93%D7%9A-%D7%A8%D7%94-%D7%92%D7%91%D7%A8%D7%99%D7%9D.mp3"),
 ];
 
 List<String> genres = ["All Songs", "hebrew"];
 
 List<List<Song>> searchPath = [];
-List<Song> gridSongs = new List.from(songs);
+List<Song> gridSongs = [];
 
 class _AllSongsState extends State<AllSongs> {
   final TextEditingController controller = new TextEditingController();
@@ -87,11 +89,21 @@ class _AllSongsState extends State<AllSongs> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    // setState(() {
+    signInAnon();
+    // });
+  }
+
+  @override
   Widget build(BuildContext context) {
     // setState(() {
     //   signInAnon();
     // });
     return Scaffold(
+        key: _scaffoldKey,
         backgroundColor: Colors.transparent,
         body:
             // Stack(
@@ -389,13 +401,15 @@ class _AllSongsState extends State<AllSongs> {
                               fillColor: Colors.transparent,
                             ),
                             onChanged: (String value) {
-                              setState(() {
-                                // searchPath.add(new List.from(gridSongs));
-                                gridSongs = value.length > previousValue.length
-                                    ? getNextSong(value)
-                                    : getLastSong();
-                                previousValue = value;
-                              });
+                              if (value != previousValue)
+                                setState(() {
+                                  // searchPath.add(new List.from(gridSongs));
+                                  gridSongs =
+                                      value.length > previousValue.length
+                                          ? getNextSong(value)
+                                          : getLastSong();
+                                  previousValue = value;
+                                });
                             },
                           ),
                         ),
@@ -450,6 +464,9 @@ class _AllSongsState extends State<AllSongs> {
             songResourceFile: data['songResourceFile'],
             textResourceFile: data['textResourceFile']));
       });
+      setState(() {
+        if (songs.length > 0) gridSongs = new List.from(songs);
+      });
     });
   }
 
@@ -475,7 +492,7 @@ class _AllSongsState extends State<AllSongs> {
   }
 
   getNextSong(String value) {
-    List<Song> searchedSongs = searchPath.last
+    List<Song> searchedSongs = gridSongs
         .where((element) =>
             element.title.contains(value) || element.artist.contains(value))
         .toList();

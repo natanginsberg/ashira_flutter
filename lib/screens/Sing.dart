@@ -23,7 +23,7 @@ class Sing extends StatefulWidget {
   _SingState createState() => _SingState(song);
 }
 
-class _SingState extends State<Sing> {
+class _SingState extends State<Sing> with WidgetsBindingObserver {
   Song song;
   AudioCache audioCache = AudioCache();
   AudioPlayer audioPlayer = AudioPlayer();
@@ -50,14 +50,28 @@ class _SingState extends State<Sing> {
   Future<void> dispose() async {
     // TODO: implement dispose
     int result = await audioPlayer.stop();
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
   }
 
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance!.addObserver(this);
     parseFuture = _parseLines();
     _progressValue = 0.0;
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused) {
+      //stop your audio player
+      pause();
+      timer.cancel();
+    }
+    // } else if (state == AppLifecycleState.resumed) {
+    //   play();
+    //   }
   }
 
   _parseLines() async {
@@ -73,23 +87,17 @@ class _SingState extends State<Sing> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: MediaQuery
-            .of(context)
-            .size
-            .height,
-        width: MediaQuery
-            .of(context)
-            .size
-            .width,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             gradient: RadialGradient(
-              center: Alignment.center,
-              radius: 0.8,
-              colors: [
-                const Color(0xFF221A4D), // blue sky
-                const Color(0xFF000000), // yellow sun
-              ],
-            )),
+          center: Alignment.center,
+          radius: 0.8,
+          colors: [
+            const Color(0xFF221A4D), // blue sky
+            const Color(0xFF000000), // yellow sun
+          ],
+        )),
         child: Column(
           children: [
             SafeArea(
@@ -99,6 +107,8 @@ class _SingState extends State<Sing> {
                   IconButton(
                     onPressed: () {
                       audioPlayer.stop();
+                      isPlaying = false;
+                      timer.cancel();
                       Navigator.pop(context);
                     },
                     icon: Icon(
@@ -124,13 +134,13 @@ class _SingState extends State<Sing> {
               height: 200,
               decoration: BoxDecoration(
                   gradient: RadialGradient(
-                    center: Alignment.center,
-                    radius: 0.8,
-                    colors: [
-                      const Color(0xFF221A4D), // blue sky
-                      const Color(0xFF000000), // yellow sun
-                    ],
-                  )),
+                center: Alignment.center,
+                radius: 0.8,
+                colors: [
+                  const Color(0xFF221A4D), // blue sky
+                  const Color(0xFF000000), // yellow sun
+                ],
+              )),
               child: FutureBuilder(
                 future: parseFuture,
                 builder: (context, snapShot) {
@@ -156,22 +166,26 @@ class _SingState extends State<Sing> {
               valueColor: new AlwaysStoppedAnimation<Color>(Color(0xFFB15EC2)),
               value: _progressValue,
             ),
-            // isPlaying
-            //     ? IconButton(
-            //         icon: Icon(Icons.pause, color: Colors.white),
-            //         onPressed: () {
-            //           pause();
-            //         })
-            //     :
-            IconButton(
-              icon: Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                play();
-              },
-            )
+            isPlaying
+                ? IconButton(
+                    iconSize: 25,
+                    icon: Icon(
+                      Icons.pause,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      pause();
+                    })
+                : IconButton(
+                    iconSize: 25,
+                    icon: Icon(
+                      Icons.play_arrow,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      play();
+                    },
+                  )
           ],
         ),
       ),
@@ -179,15 +193,21 @@ class _SingState extends State<Sing> {
   }
 
   void play() async {
-    int result = await audioPlayer.play(song.songResourceFile);
+    int result = await audioPlayer.play(song.songResourceFile, stayAwake: true);
+    // Future<int> duration = audioPlayer.getDuration();
+    // duration.then((value) =>
+    // songLength = value);
 
     if (result == 1) {
+      setState(() {
+        isPlaying = true;
+      });
       // audioPlayer.getDuration().then((value) => songLength = value);
     }
 
     timer = Timer.periodic(
         Duration(milliseconds: 100),
-            (Timer t) =>
+        (Timer t) =>
             audioPlayer.getCurrentPosition().then((value) => updateUI(value)));
 
     // audioPlayer.onAudioPositionChanged.listen((Duration p) => {updateUI(p)});
@@ -217,11 +237,11 @@ class _SingState extends State<Sing> {
         text: TextSpan(
             style: TextStyle(fontSize: 27, color: Colors.white),
             children: [
-              TextSpan(text: line.past),
-              TextSpan(
-                  text: line.future,
-                  style: TextStyle(color: Colors.white30, fontSize: 27))
-            ]));
+          TextSpan(text: line.past),
+          TextSpan(
+              text: line.future,
+              style: TextStyle(color: Colors.white30, fontSize: 27))
+        ]));
     // future: line.past + line.splitWordPast,
     // past: line.splitWordFuture + line.future);
   }

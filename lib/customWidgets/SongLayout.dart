@@ -51,13 +51,15 @@ class SongLayout extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      song.artist,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Normal',
-                          fontSize: 15),
+                    padding: const EdgeInsets.all(4.0),
+                    child: Center(
+                      child: Text(
+                        song.artist,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Normal',
+                            fontSize: 15),
+                      ),
                     ),
                   )
                 ],
